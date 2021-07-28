@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-</head>
-<body>
+@extends('navbar')
 
-        <form action="" method="post">
+@section('content')
 
-            @csrf
-            <label for="email">Email ID:</label>
-            <input type="email" name="email" Placeholder="Email ID"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" name="password" Placeholder="Password"><br><br>
-            <input type="submit">
-            <a href="register">Registration </a>
-        </form>
-    
+            <div class="container">
+            <h2>Stacked form</h2>
+            <form action="" method="post">
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <a href="/register" role="button">Registration</a>
+            </form>
+            </div>
+
+@endsection
 </body>
 </html>

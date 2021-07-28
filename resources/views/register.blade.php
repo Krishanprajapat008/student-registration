@@ -1,7 +1,10 @@
+@extends('navbar')
+
+@section('content')
 
 <div class="container">
 
-<form action="/regstr" method="post">
+<form action="register" method="post">
 
     @csrf
     <input type="text" name="fname" Placeholder="Enter First Name">
@@ -9,10 +12,10 @@
 
     <label for="Gender">Gender:</label><br>
     
-    <label for="Male">Male :</label>
+    <label>Male :</label>
     <input type="radio" name="gender" value="Male">
-    <label for="css">Female :</label>
-    <input type="radio" name="gender" value="Female"><br><br>
+    <label>Female :</label>
+    <input type="radio" name="gender" value="Female"> 
       
      
     <input type="email" name="email" Placeholder="Enter Email ID"><br><br>
@@ -21,18 +24,18 @@
     <input type="text" name="mobile" Placeholder="Enter Mobile number"><br><br>
 
     <input type="text" name="state" Placeholder="State">
-    <input type="number" name="pin" Placeholder="pin">
+    <input type="number" name="pin" Placeholder="pin"><br><br>
     <input type="text" name="city" Placeholder="city">
-
-    <input type="text" name="Country" Placeholder="country"><br><br>
+    <input type="text" name="country" Placeholder="country"><br><br>
 
     <input type="password" name="password" Placeholder="Password">
     <input type="password" name="cnfpassword" Placeholder="Confirm Password"><br><br>
 
-    <input type="file" name="profileimage">
+    <input type="file" name="fimg">
 
     <button>Submit</button>
 
 </div>
-
 </form>
+
+@endsection

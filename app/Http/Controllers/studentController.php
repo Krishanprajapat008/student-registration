@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use App\Models\userinfo;
 
 class studentController extends Controller
 {
@@ -36,9 +37,9 @@ class studentController extends Controller
  
     }
 
-    function update (Request $req){
+    function show (Request $req){
 
-        $store = new student();
+        $store = new userinfo();
 
         $store->fname = $req->fname;
         $store->lname = $req->lname;
@@ -46,13 +47,14 @@ class studentController extends Controller
         $store->email = $req->email;
         $store->address = $req->address;
         $store->phone = $req->phone;
-        $store->mobile = $req->mobile;
+        $store->Mobile = $req->mobile;
         $store->state = $req->state;
         $store->pin = $req->pin;
         $store->city = $req->city;
         $store->country = $req->country;
         $store->password = $req->password;
         $store->cnfpassword = $req->cnfpassword;
+        $store->fimg = $req->fimg;
 
         $store->save();
 

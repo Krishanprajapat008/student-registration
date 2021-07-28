@@ -1,3 +1,13 @@
+Steps :
+
+1.  Student login and Registration page created.
+2.  php artisan serve : http://127.0.0.1:8000
+3.  http://127.0.0.1:8000/ login page
+4.  http://127.0.0.1:8000/student/create - register page
+5.  Register page : Student registration form will be display and student can fill the records and updated it into database.
+6.  student school/college details udpated
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

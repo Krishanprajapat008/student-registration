@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\studentController;
+use App\Http\Controllers\userController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,6 @@ Route::get('student/create',[studentController::class,'create'])->name('student.
 Route::post('update',[studentController::class,'store'])->name('update');
 Route::view('update','update');
 
+
+route::view('schooldata', 'schooldata');
 

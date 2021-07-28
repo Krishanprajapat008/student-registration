@@ -14,28 +14,23 @@ class studentController extends Controller
         return view('create');
     }
  
-    public function store(Request $request)
+    // public function show(Request $request)
  
-    {
-        $input = $request->all();
+    // {
+    //     $input = $request->all();
  
-        $request->validate([
-            'fname' => 'required|max:255',
-            'lname' => 'required|max:255',
-            'gender' => 'required',
-            'phone' => 'required|min:10',
-            'address' => 'required|max:255',
-            'email' => 'required|email|max:255',
-            'password' => 'required|min:6|max:255',
+    //     $request->validate([
+    //         'fname' => 'required|max:255',
+    //         'lname' => 'required|max:255',
+    //         'gender' => 'required',
+    //         'phone' => 'required|min:10',
+    //         'address' => 'required|max:255',
+    //         'email' => 'required|email|max:255',
+    //         'password' => 'required|min:6|max:255',
             
-        ]);
+    //     ]);
  
-        $input['password'] = bcrypt($input['password']);
-        Student::create($input);
- 
-        return back()->with('success','Successfully registered a new student!');
- 
-    }
+    // }
 
     function show (Request $req){
 
@@ -58,7 +53,7 @@ class studentController extends Controller
 
         $store->save();
 
-        redirect('student/create');
+        return redirect('register');
 
 
 

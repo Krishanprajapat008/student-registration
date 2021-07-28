@@ -4,7 +4,8 @@
 
             <div class="container">
             <h2>Stacked form</h2>
-            <form action="" method="post">
+            <form action="login" method="post">
+                @csrf
                 <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
